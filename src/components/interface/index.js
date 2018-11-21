@@ -1,4 +1,5 @@
 export * from './alert'
+export * from './content-container'
 export * from './form-inputs'
 export * from './header'
 export * from './info-message'

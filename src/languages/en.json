@@ -3,7 +3,7 @@
   "menu.support": "Support",
   "menu.new_order" : "New Order",
   "menu.orders" : "Orders",
-  "menu.subscriptions" : "Subscriptions",
+  "menu.subscriptions" : "Auto Likes/Views",
   "menu.prices_services" : "Prices & Services",
   "menu.api" : "API",
   "menu.add_balance" : "Add balance",
@@ -11,6 +11,9 @@
   "menu.tos" : "Terms of Service",
   "menu.logout" : "Logout",
 
+  "menu.create_order.instagram" : "Instagram",
+  "menu.create_order.facebook" : "Facebook",
+  
   "api_key.no_key" : "You don't have an API Key.",
   "api_key.api_key" : "API Key",
   "api_key.url" : "URL",
@@ -58,6 +61,8 @@
   "order_list.headers.status" : "Status",
   "order_list.headers.initial_count" : "Start count",
 
+  "order_list.status_filter.all" : "All",
+  "order_list.status_filter.refunded" : "Refunded",
   "order_list.status_filter.processing" : "Processing",
   "order_list.status_filter.pending" : "Pending",
   "order_list.status_filter.completed" : "Completed",
@@ -131,7 +136,7 @@
   "page.orders.title" : "Orders",
   "page.orders.toolbar.create" : "New order",
 
-  "page.subscriptions.title" : "Subscriptions",
+  "page.subscriptions.title" : "Auto Likes/Views",
   "page.subscriptions.toolbar.create" : "New order",
 
   "page.catalog.title" : "Services list",

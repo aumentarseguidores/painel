@@ -8,8 +8,10 @@ class LanguageSwitch extends React.PureComponent {
               {({ switchToEnglish, switchToPortuguese }) => (
                 <React.Fragment>
                   <UncontrolledDropdown nav>
-                    <DropdownToggle nav caret>
-                      Lang
+                    <DropdownToggle nav>
+                      <div className="mb-0 text-sm  font-weight-bold">
+                        Lang
+                      </div>
                     </DropdownToggle>
                     <DropdownMenu >
                       <DropdownItem onClick={switchToEnglish} >EN</DropdownItem>

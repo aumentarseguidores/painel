@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet'
 import { FormattedMessage } from 'react-intl'
 
 import { notifyError } from '../../actions'
-import { FormInput, PageHeader } from '../../components/interface'
+import { FormInput, PageHeader, ContentContainer } from '../../components/interface'
 
 class ResetPasswordPage extends Component {
 
@@ -35,33 +35,35 @@ class ResetPasswordPage extends Component {
             subtitle={<FormattedMessage id="page.auth.reset_password.subtitle" />}
           />
 
-          <Card>
-            <CardBody>
-              <form onSubmit={handleSubmit(this.onSubmit.bind(this))} >
+          <ContentContainer>
+            <Card>
+              <CardBody>
+                <form onSubmit={handleSubmit(this.onSubmit.bind(this))} >
 
-                <Field
-                  name="email"
-                  label="E-mail"
-                  type="text"
-                  placeholder="E-mail"
-                  component={FormInput}
-                />
+                  <Field
+                    name="email"
+                    label="E-mail"
+                    type="text"
+                    placeholder="E-mail"
+                    component={FormInput}
+                  />
 
-                <div className="my-3">
-                  <Button color="primary" ><FormattedMessage id="page.auth.reset_password.confirm" /></Button>
-                </div>
+                  <div className="my-3">
+                    <Button color="primary" ><FormattedMessage id="page.auth.reset_password.confirm" /></Button>
+                  </div>
 
-                <hr/>
+                  <hr/>
 
-                <p className="text-center" >
-                  <Link to="/login" ><FormattedMessage id="page.auth.reset_password.back" /></Link>
-                </p>
+                  <p className="text-center" >
+                    <Link to="/login" ><FormattedMessage id="page.auth.reset_password.back" /></Link>
+                  </p>
 
-              </form>
+                </form>
 
-              {this._helmet()}
-            </CardBody>
-          </Card>
+                {this._helmet()}
+              </CardBody>
+            </Card>
+          </ContentContainer>
         </div>
     )
   }

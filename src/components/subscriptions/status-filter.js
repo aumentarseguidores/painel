@@ -16,7 +16,7 @@ class SubscriptionStatusFilter extends React.PureComponent {
                     }}
             >
               <ButtonGroup>
-                { _.map(statuses, statusItem => <Button key={`ssf-${statusItem.status}`} color="primary" outline={status !== statusItem.status} onClick={() => handleClick(statusItem.status, statusItem.child)} >{statusItem.label}</Button> ) }
+                { _.map(statuses, statusItem => <Button key={`ssf-${statusItem.status}`} color={status === statusItem.status ? "success" : "primary"} onClick={() => handleClick(statusItem.status, statusItem.child)} >{statusItem.label}</Button> ) }
               </ButtonGroup>
             </div>)
   }

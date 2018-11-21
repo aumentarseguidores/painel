@@ -7,10 +7,10 @@ const AppFooter = () => {
               <hr/>
 
               <p className="text-muted" >
-                <small><FormattedMessage id="copy.copy_site_name" /></small>
+                <small><FormattedMessage id="footer.copy_site_name" /></small>
               </p>
             </footer>
            )
 }
 
-export { AppFooter }
+export default AppFooter

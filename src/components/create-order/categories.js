@@ -17,8 +17,8 @@ class CreateOrderCategoryList extends React.PureComponent {
                     }}
               >
               <ButtonGroup>
-                <Button key='pocl-all' color="primary" outline={!!this.state.category.id} onClick={ () => this._handleClick({}) } >Todos</Button>
-                { _.map(categories, category => <Button key={`pocl-${category.id}`} color="primary" outline={this.state.category.id !== category.id} onClick={() => this._handleClick(category)} >{category.label}</Button> ) }
+                <Button key='pocl-all' color={!this.state.category.id ? "success" : "primary"} onClick={ () => this._handleClick({}) } >Todos</Button>
+                { _.map(categories, category => <Button key={`pocl-${category.id}`} color={ this.state.category.id === category.id ? "success" : "primary"} onClick={() => this._handleClick(category)} >{category.label}</Button> ) }
               </ButtonGroup>
             </div>)
   }

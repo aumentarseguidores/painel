@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageHeader } from '../../components/interface'
+import { PageHeader, ContentContainer } from '../../components/interface'
 
 class ApiDocsPage extends React.PureComponent {
 
@@ -7,6 +7,7 @@ class ApiDocsPage extends React.PureComponent {
 
     return (<div>
 
+<ContentContainer>
 <h3>ENDPOINT</h3>
 <code>https:\/\/us-central1-api-painel-as.cloudfunctions.net/v2</code>
 
@@ -163,6 +164,7 @@ class ApiDocsPage extends React.PureComponent {
 })}
 </code>
 
+</ContentContainer>
 </div>)
   }
 }

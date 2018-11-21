@@ -46,11 +46,17 @@ class CreateOrderForm extends React.Component {
   _handleChange = ({name, value}) => {
     const { values } = this.state
     const updatedValues = { ...values, [name]: value }
-    this.setState({values: updatedValues})
 
     if(name === 'quantity' || name === 'posts') {
       this._handleQuantityChange({name, value})
     }
+
+    if(name === 'comentarios')  {
+      this._handleQuantityChange({ name, value: value.split("\n").length })
+      updatedValues.quantity = value.split("\n").length
+    }
+
+    this.setState({ values: updatedValues })
   }
 
   _handleQuantityChange = ({name, value}) =>  {
@@ -161,7 +167,7 @@ class OrderFormField extends React.PureComponent {
               <Input
                 value={value || ''}
                 name={field.name}
-                type="text"
+                type={field.type || "text"}
                 placeholder={field.placeholder}
                 onChange={this._handleChange}
               />

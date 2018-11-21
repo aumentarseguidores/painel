@@ -1,1 +1,3 @@
 src/store/firebaseConfig.js
+/node_modules
+/build

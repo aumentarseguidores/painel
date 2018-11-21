@@ -13,10 +13,8 @@ class CreateOrder extends React.Component {
 
     return (<div className="my-3" >
 
-              <CreateOrderCategoryList categories={this.props.categories} handleClick={this._selectCategory} />
-
               <CreateOrderProductList
-                products={this._filterProducts()}
+                products={_.orderBy(this.props.products, ['label'], ['asc'])}
                 handleClick={this._selectProduct}
                 selected={this.state.product}
               />

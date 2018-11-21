@@ -5,7 +5,7 @@ import { ListGroup, ListGroupItem } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { FormattedMessage } from 'react-intl'
 
-import { PageHeader, LinkList, LinkListItem, LoadingMessage } from '../../components/interface'
+import { PageHeader, LinkList, LinkListItem, LoadingMessage, ContentContainer } from '../../components/interface'
 
 class ViewAccountPage extends Component {
 
@@ -20,31 +20,32 @@ class ViewAccountPage extends Component {
     return (
       <div>
         <PageHeader title={<FormattedMessage id="page.account.view.title" />} />
+        <ContentContainer>
+          <ListGroup>
+            <ListGroupItem>
+              <small><FormattedMessage id="page.account.view.email" /></small>
+              <h4>{profile.email}</h4>
+            </ListGroupItem>
 
-        <ListGroup>
-          <ListGroupItem>
-            <small><FormattedMessage id="page.account.view.email" /></small>
-            <h4>{profile.email}</h4>
-          </ListGroupItem>
+            <ListGroupItem>
+              <small><FormattedMessage id="page.account.view.name" /></small>
+              <h4>{profile.name}</h4>
+            </ListGroupItem>
 
-          <ListGroupItem>
-            <small><FormattedMessage id="page.account.view.name" /></small>
-            <h4>{profile.name}</h4>
-          </ListGroupItem>
+            <FormattedMessage id="page.account.view.phone" />
 
-          <FormattedMessage id="page.account.view.phone" />
+            <ListGroupItem>
+              <small><FormattedMessage id="page.account.view.password" /></small>
+              <h5><Link to="/auth/reset" ><FormattedMessage id="page.account.view.reset_password" /></Link></h5>
+            </ListGroupItem>
+          </ListGroup>
 
-          <ListGroupItem>
-            <small><FormattedMessage id="page.account.view.password" /></small>
-            <h5><Link to="/auth/reset" ><FormattedMessage id="page.account.view.reset_password" /></Link></h5>
-          </ListGroupItem>
-        </ListGroup>
-
-        <LinkList>
-          <LinkListItem to="/orders" ><FormattedMessage id="page.account.view.order_history" /></LinkListItem>
-          <LinkListItem to="/balance" ><FormattedMessage id="page.account.view.balance_history" /></LinkListItem>
-          <LinkListItem to="/support" ><FormattedMessage id="page.account.view.support" /></LinkListItem>
-        </LinkList>
+          <LinkList>
+            <LinkListItem to="/orders" ><FormattedMessage id="page.account.view.order_history" /></LinkListItem>
+            <LinkListItem to="/balance" ><FormattedMessage id="page.account.view.balance_history" /></LinkListItem>
+            <LinkListItem to="/support" ><FormattedMessage id="page.account.view.support" /></LinkListItem>
+          </LinkList>
+        </ContentContainer>
       </div>
     )
   }

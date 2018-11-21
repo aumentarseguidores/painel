@@ -2,8 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { store } from './store'
-import registerServiceWorker from './registerServiceWorker'
+import { unregister } from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
+import "./assets/vendor/nucleo/css/nucleo.css"
+import "./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+import "./assets/css/argon.min.css"
+
 import App from './App'
 //import { PersistGate } from 'redux-persist/integration/react'
 
@@ -17,7 +21,8 @@ ReactDOM.render(
   </IntlProvider>
 
 , document.getElementById('root'));
-registerServiceWorker()
+
+unregister()
 
 /*
 <PersistGate loading={<LoadingMessage />} persistor={persistor} >

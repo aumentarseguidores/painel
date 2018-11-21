@@ -3,7 +3,7 @@
   "menu.support": "Suporte",
   "menu.new_order" : "Novo Pedido",
   "menu.orders" : "Pedidos",
-  "menu.subscriptions" : "Assinaturas",
+  "menu.subscriptions" : "Auto Likes/Views",
   "menu.prices_services" : "Preços & Serviços",
   "menu.api" : "API",
   "menu.auth" : "Entrar / Cadastrar",
@@ -11,6 +11,9 @@
   "menu.account" : "Conta",
   "menu.tos" : "Termos de Uso",
   "menu.logout" : "Sair",
+
+  "menu.create_order.instagram" : "Instagram",
+  "menu.create_order.facebook" : "Facebook",
 
   "api_key.no_key" : "Você não tem uma Chave API.",
   "api_key.api_key" : "Chave API",
@@ -57,9 +60,11 @@
   "order_list.headers.profile_link" : "Perfil/Link",
   "order_list.headers.amount" : "Valor",
   "order_list.headers.status" : "Status",
-  "order_list.headers.initial_count" : "Cont. Inicial",
+  "order_list.headers.initial_count" : "Cont. inicial",
 
+  "order_list.status_filter.all" : "Todos",
   "order_list.status_filter.processing" : "Processando",
+  "order_list.status_filter.refunded" : "Reembolsado",
   "order_list.status_filter.pending" : "Aguardando",
   "order_list.status_filter.completed" : "Concluídos",
   "order_list.status_filter.canceled" : "Cancelados/Erro",
@@ -132,7 +137,7 @@
   "page.orders.title" : "Pedidos",
   "page.orders.toolbar.create" : "Novo pedido",
 
-  "page.subscriptions.title" : "Assinaturas",
+  "page.subscriptions.title" : "Auto Likes/Views",
   "page.subscriptions.toolbar.create" : "Novo pedido",
 
   "page.catalog.title" : "Catálogo de serviços",

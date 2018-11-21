@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageHeader } from '../../components/interface'
+import { PageHeader, ContentContainer } from '../../components/interface'
 
 class FaqPage extends React.PureComponent {
 
@@ -7,6 +7,8 @@ class FaqPage extends React.PureComponent {
 
     return (<div>
               <PageHeader title="Perguntas Frequentes" subtitle="Sane suas dúvidas sobre nossos serviços." />
+
+              <ContentContainer>
 
               <h4>Como funciona nosso painel?</h4>
 
@@ -52,6 +54,7 @@ class FaqPage extends React.PureComponent {
               <p>A entrega será considerada concluída após contagem inicial mais valor comprado ser atingido. NÃO compre simultâneamente conosco e outras empresas pois isso irá atrapalhar a contagem. NÃO nos responsabilizamos se você fizer isso e a sua compra conosco será considerada concluída quando atingir o valor da soma entre contagem inicial mais valor comprado. Só compre se concordar com essa questão.
               </p>
 
+              </ContentContainer>
 
             </div>)
   }

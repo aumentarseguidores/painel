@@ -26,8 +26,18 @@ function mapStateToProps({ firebase: { data } }) {
   return { orders: data.orders }
 }
 
-function firebaseData({ status }, store) {
-  return [{ path: `/userOrders/${store.getState().firebase.auth.uid}`, storeAs: 'orders', queryParams: ['orderByChild=status', `equalTo=${status}`] }]
+function firebaseData({ status, limitToLast }, store) {
+
+  const queryParams = [`limitToLast=${limitToLast}` ]
+
+  if(status)  {
+    queryParams.push('orderByChild=status')
+    queryParams.push(`equalTo=${status}`)
+  }
+
+  return [{
+            path: `/userOrders/${store.getState().firebase.auth.uid}`,
+            storeAs: 'orders', queryParams }]
 }
 
 OrdersWrapper = firebaseConnect(firebaseData)(OrdersWrapper)

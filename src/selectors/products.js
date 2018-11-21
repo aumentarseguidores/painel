@@ -12,7 +12,7 @@ const productsSelector = createSelector(
     //   //_.forEach(customPrices, (price, productId) => { products. })
     // }
 
-    return _.merge( products, _.transform(customPrices,  transformCustomPrices, {}) )
+    return _.filter(_.merge( products, _.transform(customPrices,  transformCustomPrices, {}) ), product => product.id )
   }
 )
 

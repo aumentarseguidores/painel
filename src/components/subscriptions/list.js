@@ -13,23 +13,27 @@ class SubscriptionList extends React.PureComponent {
                       overflowY: 'hidden'
                     }}
               >
-                <table className="table" >
-                  <thead>
-                  <tr>
-                    <th><FormattedMessage id="order_list.headers.id" /></th>
-                    <th><FormattedMessage id="order_list.headers.date" /></th>
-                    <th><FormattedMessage id="order_list.headers.service" /></th>
-                    <th><FormattedMessage id="order_list.headers.quantity" /></th>
-                    <th><FormattedMessage id="order_list.headers.profile_link" /></th>
-                    <th><FormattedMessage id="order_list.headers.amount" /></th>
-                    <th><FormattedMessage id="order_list.headers.status" /></th>
-                    <th>&nbsp;</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                    {_.map(this._orderSubscriptions(), this._renderSubscriptionItem )}
-                  </tbody>
-                </table>
+                <div className="card" >
+                  <div className="card-body">
+                    <table className="table" >
+                      <thead>
+                      <tr>
+                        <th><FormattedMessage id="order_list.headers.id" /></th>
+                        <th><FormattedMessage id="order_list.headers.date" /></th>
+                        <th><FormattedMessage id="order_list.headers.service" /></th>
+                        <th><FormattedMessage id="order_list.headers.quantity" /></th>
+                        <th><FormattedMessage id="order_list.headers.profile_link" /></th>
+                        <th><FormattedMessage id="order_list.headers.amount" /></th>
+                        <th><FormattedMessage id="order_list.headers.status" /></th>
+                        <th>&nbsp;</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        {_.map(this._orderSubscriptions(), this._renderSubscriptionItem )}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>)
   }
 

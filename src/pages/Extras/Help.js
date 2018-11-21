@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageHeader, Whatsapp } from '../../components/interface'
+import { PageHeader, ContentContainer, Whatsapp } from '../../components/interface'
 import { ListGroup, ListGroupItem } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { FormattedMessage } from 'react-intl'
@@ -12,7 +12,7 @@ class HelpPage extends React.PureComponent {
 
     return (<div>
               <PageHeader title={<FormattedMessage id="page.extras.support.title" />} />
-
+              <ContentContainer>
               <p><FormattedMessage id="page.extras.support.if_you_have_problems" /></p>
 
               <ListGroup>
@@ -33,7 +33,7 @@ class HelpPage extends React.PureComponent {
 
                 </ListGroupItem>
               </ListGroup>
-
+              </ContentContainer>
             </div>)
   }
 }

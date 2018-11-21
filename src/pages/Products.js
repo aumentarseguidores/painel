@@ -2,7 +2,7 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import { ProductsWrapper } from '../wrappers'
-import { PageHeader } from '../components/interface'
+import { PageHeader, ContentContainer } from '../components/interface'
 
 class ProductsPage extends React.PureComponent {
 
@@ -10,7 +10,9 @@ class ProductsPage extends React.PureComponent {
 
     return (<div>
               <PageHeader title={<FormattedMessage id="page.catalog.title" />} subtitle={<FormattedMessage id="page.catalog.subtitle" />} />
-              <ProductsWrapper />
+              <ContentContainer>
+                <ProductsWrapper />
+              </ContentContainer>
             </div>)
   }
 }

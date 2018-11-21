@@ -11,8 +11,16 @@ const generateMinMaxPosts = (values) =>  {
 }
 
 const quantityModifiers = {
-  min_max_posts: generateMinMaxPosts
+  min_max_posts: generateMinMaxPosts,
+  comments_field_number_of_lines: calculateNumberOfLinesInField_Comments
 }
+
+const calculateNumberOfLinesInField_Comments = (values) => {
+  return {
+    quantity: (values.comentarios || "").split("\n").length
+  }
+}
+
 
 const generateQuantity = (values, modifier) => {
 

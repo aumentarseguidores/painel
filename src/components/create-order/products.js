@@ -2,9 +2,9 @@ import React from 'react'
 import { ListGroupItem, ListGroup } from 'reactstrap'
 import _ from 'lodash'
 import { FormattedMessage } from 'react-intl'
+import withLocalization from '../../languages/withLocalization'
 
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faAngleLeft from '@fortawesome/fontawesome-free-solid/faAngleLeft'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class CreateOrderProductList extends React.Component {
 
@@ -29,17 +29,22 @@ class CreateOrderProductList extends React.Component {
 
     return (<ListGroup>
               <ListGroupItem action onClick={ () => handleClick({}) } >
-                <FontAwesomeIcon icon={faAngleLeft} /> <FormattedMessage id="create_order.back" />
+                <FontAwesomeIcon icon="angle-left" /> <FormattedMessage id="create_order.back" />
               </ListGroupItem>
 
               <ListGroupItem>
                 <small>
                   <FormattedMessage id="create_order.list_title_buying" />
                 </small>
-                <h6>{ selected.label }</h6>
+                <h4>{  this.renderLabel()  }</h4>
                 <small>R${ selected.price } <FormattedMessage id="create_order.per_thousand_units" /></small>
               </ListGroupItem>
            </ListGroup>)
+  }
+
+  renderLabel = () => {
+    const { locale, selected: { label, label_en } } = this.props
+    return locale === 'en' ? label_en : label
   }
 }
 
@@ -52,10 +57,18 @@ class CreateOrderProductListItem extends React.PureComponent  {
               action onClick={() => handleClick(product)}
               active={ selected && selected.id === product.id ? true : false }
             >
-              <h6>{product.label}</h6>
+              <h4>{  this.renderLabel()  }</h4>
               <small>R${product.price} <FormattedMessage id="create_order.per_thousand_units" /></small>
             </ListGroupItem>)
   }
+
+  renderLabel = () => {
+    const { locale, product: { label, label_en } } = this.props
+
+    return locale === 'en' ? label_en : label
+  }
 }
+
+CreateOrderProductList = withLocalization(CreateOrderProductList)
 
 export { CreateOrderProductList }
